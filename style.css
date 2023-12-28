@@ -1,0 +1,680 @@
+*{
+    margin:0;
+    padding:0;
+    font-family:sans-serif;
+}
+
+body,html{
+    scroll-behavior: smooth;
+}
+
+.hero{
+    width: 100%;
+    height: 60px;
+    position: relative;
+    background-color: #fff;
+}
+
+nav{
+    display: flex;
+    width: 84%;
+    justify-content: space-between;
+    align-items: center;
+}
+
+nav h2{
+    width: 80px;
+    height: 60px;
+    padding-top: 20px;
+    margin-left: 30px;
+    align-items: center;
+    font-weight: 600;
+    font-family:Azonix;
+    letter-spacing: .1rem;
+    justify-content: center;
+}
+
+nav span{
+    color:rgb(20, 82, 145);
+}
+
+nav ul li{
+    display: inline-block;
+    list-style: none;
+    font-size: 15px;
+    margin: 10px 20px;
+}
+
+nav ul li a{
+    text-decoration: none;
+    color: black;
+    font-weight: bold;
+    font-family:noddle;
+    font-size: 20px;
+}
+
+nav ul li a:hover{
+    color: rgb(20, 82, 145);
+    text-shadow: 0 0 40px;
+}
+
+nav ul li a.active{
+    color:rgb(20, 82, 145) ;
+}
+
+.menu-bar{
+    font-size: 25px;
+    color: #000;
+    z-index: 10001;
+    cursor: pointer;
+    margin-left: 25px;
+    display: none;
+}
+
+.home{
+    background-image:url(images/bg.jpg);
+    position: relative;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content:space-around;
+    align-items: center;
+    left:5px;
+}
+
+.home:nth-of-type(1){
+    left:-2%;
+}
+
+.social-links a{
+    display:grid;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(20, 82, 145);
+    color: rgb(20, 82, 145);
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+    opacity: 0;
+    animation: slideRight 2s ease forwards;
+    animation-delay: 1s;
+}
+
+.social-links a:hover{
+    background-color: rgb(20, 82, 145);
+    color: white;
+    box-shadow: 0 0 20px rgb(20, 82, 145);
+}
+
+.home-content{
+    max-width: 700px;
+    /* margin: 50px; */
+}
+
+.home-content h3{
+    font-size: 30px;
+    font-weight: 700;
+    font-family: Romance;
+}
+
+.home-content h3:nth-of-type(2){
+    margin-bottom: 20px;
+}
+
+.home-content h3 span {
+    color: rgb(20, 82, 145);
+    font-family: Romance;
+    
+}
+
+.home-content h1{
+    font-size: 45px;
+    font-weight: 600;
+    /* margin: -3px 0; */
+    font-family: Romance;
+}
+
+.home-content p{
+    font-size: 15px;
+    margin-bottom: 30px;
+    font-family: limited;
+    line-height:normal;
+    letter-spacing: .09em;
+}
+
+.knowme{
+    align-items: center;
+    opacity: 0;
+    animation-delay: 1s;
+    animation: slideLeftKnow 1s ease forwards,fade linear;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+
+}
+
+.btn-knowme {
+    padding: 9px 20px;
+    font-weight: 700;
+    font-size: 14px;
+    font-family:noddle;
+    cursor: pointer;
+    border: none;
+    text-align: center;
+    background-color: rgb(20, 82, 145);
+    border: 2px solid rgb(20, 82, 145);
+    color: white;
+    margin-left: 110px;
+    letter-spacing: .2rem;
+}
+
+.btn-knowme:hover{
+    /* background-color: rgb(20, 82, 145); */
+    color: rgb(20, 82, 145);
+    background: transparent;
+    box-shadow: 0 0 20px rgb(20, 82, 145);
+}
+
+.image-content img{
+left:50%;
+max-width: 500px;
+bottom: 40px;
+/* opacity: 0; */
+animation: floatImage 4s ease-in-out infinite;
+animation-delay: 3s;
+}
+
+/* ABOUT SELECTION */
+
+.about-main{
+    /* padding-top: 10%; */
+    background-color: #ffffff;
+}
+
+.aboutfirst{
+    display:grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: 1rem;
+   
+}
+
+.aboutme h2,.project-title h2,.contact-text h2{
+    display: block;
+    font-family: retro;
+    font-size: 1.9rem;
+    padding-top: 9vh;
+    letter-spacing: 1px;
+    letter-spacing: 3px;
+    text-align: center;
+    margin-bottom: 3.5rem;
+    position: relative;
+    color: #000000;
+}
+
+.contact-text span{
+    color:rgb(20, 82, 145);
+}
+
+.aboutme h2::after,.project-title h2::after,.contact-text h2::after{
+    content: '';
+    position: absolute;
+    top: calc(100% + 1.5rem);
+    height: 4px;
+    width: 2rem;
+    background: rgb(20, 82, 145);
+    left: 50%;
+    transform: translateX(-50%);
+    border-radius: 5px;
+}
+
+.aboutme p,.project-title p,.contact-text p,.contact-text h4{
+    display: block;
+    text-align: center;
+    color: #555;
+    font-size: 1.3rem;
+    font-family: limited;
+    font-weight: 500;
+    max-width: 80rem;
+    margin: auto;
+    line-height: 1.6;
+}
+
+.knowme{
+    margin: 13vh;
+}
+
+.knowme h3{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.knowme-para{
+    font-size: 1rem;
+    color: #666;
+    max-width: 60rem;
+    line-height: 1.7;
+    margin-bottom: 1rem;
+}
+
+.knowme-para p{
+    margin-bottom: 20px;
+    font-family: type-machine;
+}
+
+h3{
+    display: block;
+    font-size: 1.17em;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-weight: bold;
+}
+
+.about-content-skills{
+    margin-top: -217px;
+    opacity: 0;
+    animation: slideRightSkill 1s ease forwards;
+    animation-delay: 1s;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+    animation-duration: 3s;
+}
+
+.skills {
+
+    display: flex;
+    flex-wrap: wrap;
+    position: relative;
+    /* display: block;
+    box-sizing: border-box;
+    line-height: 1.5;
+    font-family: sans-serif;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    font-family: 'Source Sans Pro',sans-serif; */
+
+}
+
+.skills-skill{
+    padding: .5rem .5rem;
+    margin-bottom: 1.5rem;
+    margin-right: 1.5rem;
+    font-size: 1rem;
+    background: rgba(153,153,153,.2);
+    border-radius: 5px;
+    font-weight: 500;
+    color: #666;
+}
+
+*, ::after, ::before {
+    margin: 0;
+    padding: 0;
+    box-sizing: inherit;
+    font-family: inherit;
+}
+
+/* <!---  PROJECT-SECTION ---> */
+
+.project-main{
+    background:linear-gradient(rgba(0,0,0,0.1),#666);
+}
+
+.project-title p{
+    padding-bottom: 50px;
+}
+
+.project-title h2{
+    padding-top: 40px;
+}
+
+.project-container{
+    display:flex;
+    gap: 20px;
+    max-width: 1224px;
+    width: 90%;
+    padding: 40px 0;
+    margin:auto;
+
+}
+
+.project-column{
+    display:flex;
+    flex-direction: column;
+    gap: 30px;
+    margin:20px 20px 0 0;
+}
+
+.project-image img{
+    width: 100%;
+    height:80%;
+    object-fit: cover;
+    
+}
+
+.project-one:hover,.project-two:hover,.project-three:hover{
+    transform: scale(1.02) translateY(-7%);
+    transition: all .3s ease-in-out;
+
+}
+
+.project-one,.project-two,.project-three{
+    padding:0;
+    background-color:#f0f0f0;
+    border-radius:0 0 8px 8px;
+    overflow: hidden;
+    box-shadow: 0px 2px 4px rgba(0,0,0,0.2);
+    cursor: pointer;
+}
+
+.project-one a,.project-two a,.project-three a{
+    text-decoration: none;
+    color: #000;
+}
+
+.project-content{
+text-align: center;
+
+}
+
+.project-content h3{
+    margin-top:2px;
+    font-size: 25px;
+    padding-bottom: 2px;
+    margin-bottom: 2px;
+}
+
+.project-content p{
+    font-family: light-trial;
+    color: #666;
+    padding-bottom: 5px;
+    font-size: 15px;
+    margin-bottom: 3px;
+}
+
+/* CONTACT SELECTION */
+
+.contact-main{
+background-image: url(images/bg.jpg);
+object-fit: cover;
+}
+
+.contact-content{
+    display: grid;
+    grid-template-columns: repeat(2,1fr);
+    align-items: center;
+    gap: .5rem;
+    margin: 60px;
+    /* margin-bottom: 60px; */
+}
+
+.contact-list{
+    line-height: 2;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-family:'Poppins', sans-serif;
+    font-size: 17px;
+    transition: all .3s ease;
+    margin-left: 10%;
+    opacity: 0;
+    animation-delay: 1s;
+    animation: slideLeftKnow 1s ease forwards,fade linear;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+}
+
+.contact-list li{
+    list-style: none;
+}
+
+.contact-list li a{
+    text-decoration: none;
+    transition: all .45s ease;
+    color: #00000044;
+}
+
+.contact-list li a:hover{
+color: #000000;
+transform: translateX(22px);
+}
+
+
+.contact-form form{
+    position: relative;
+    margin-right: 10%;
+    padding-bottom: -10px;
+    opacity: 0;
+    animation: slideRightSkill 1s ease forwards;
+    animation-delay: 4s;
+    animation-timeline: view();
+    animation-range: entry 50% cover 50%;
+    animation-duration: 3s;
+}
+
+.contact-form form input,form textarea{
+    width: 100%;
+    padding: 14px;
+    color: #ffffff;
+    background-color:#00000044 ;
+    border:none;
+    outline: none;
+    font-size: 15px;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+
+.contact-form textarea{
+    resize: none;
+    height: 200px;
+}
+
+.contact-form .submit{
+    display: inline-block;
+    cursor: pointer;
+    font-size: 16px;
+    line-height: normal;
+    vertical-align: middle;
+    white-space: nowrap;
+    text-align: center;
+    border: none;
+    border-radius: 8px;
+    color: #fff;
+    background-image: linear-gradient(-90deg,rgb(20, 82, 145),rgb(20, 82, 145));
+}
+
+.contact-form .submit:hover{
+    opacity:50%;
+    transition: all .45s ease;
+}
+
+.contact-social-links{
+    align-items: center;
+    justify-content: space-around;
+    padding-left: 40%;
+}
+
+.contact-social-links a{
+    display:inline-flex;
+    justify-content: center;
+    align-items: center;
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 2px solid rgb(20, 82, 145);
+    font-size: 30px;
+    color: rgb(20, 82, 145);
+    text-decoration: none;
+    margin: 30px 15px 30px 0;
+}
+
+.contact-social-links a:hover{
+background-color: rgb(20, 82, 145);
+color: white;
+box-shadow: 0 0 20px rgb(20, 82, 145);
+transition: all .45s ease;
+}
+
+.footer{
+    padding: 20px 15%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+    gap: 2;
+    background-color: #555;}
+
+.end-footer{
+    color: #ffffffb7;
+    font-size: 14px;
+}
+
+.top i{
+    padding: 10px;
+    border-radius: 8px;
+    font-size: 15px;
+    background-color:rgb(20, 82, 145);
+    color: #fff;
+}
+
+/* PROJECT PAGE CSS  */
+
+.second-page-content{
+    /* background-color: rgb(20, 82, 145); */
+    background: linear-gradient(to top,rgb(20, 82, 145),#fff);
+}
+
+.title-content{
+    padding: 50px;
+    color: #000;
+}
+
+.title-content h2{
+    font-size: 40px;
+    font-weight: 600;
+    padding-bottom: 15px;
+    font-family: retro;
+    color:rgb(20, 82, 145) ;
+}
+
+.title-content span{
+    font-size:20px;
+    font-family: limited;
+    color: #666;
+}
+
+.project-image-content{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.project-image-content img{
+    max-width: 100%;
+    width: 80%;
+    height: auto;
+    padding-bottom: 20px;
+}
+
+/* ANIMATION KEYFRAMES */
+
+@keyframes slideRight{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes floatImage{
+    0%{
+        transform: translateY(0);
+    }
+    50%{
+        transform: translateY(-24px);
+    }
+    100%{
+        transform: translateY(0);
+    }
+}
+
+@keyframes slideRightSkill{
+    0%{
+        transform: translateX(100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes slideLeftKnow{
+    0%{
+        transform: translateX(-100px);
+        opacity: 0;
+    }
+    100%{
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
+@keyframes fade{
+    from{
+        opacity: 0;
+    }
+    to{
+        opacity: 1;
+    }
+    0%{
+        opacity: 0;
+    }
+}
+
+/* fonts */
+
+@font-face {
+    font-family: retro;
+    src: url(fonts/retrovin.otf);
+}
+
+@font-face {
+    font-family:limited;
+    src: url(fonts/Limited.otf);
+}
+
+@font-face {
+    font-family: light-trial;
+    src: url(fonts/Unigeo64-Italic-trial.ttf);
+}
+
+@font-face {
+    font-family: Romance;
+    src: url(fonts/Romance.ttf);
+}
+
+@font-face {
+    font-family:type-machine;
+    src: url(fonts/Type\ Machine.ttf);
+}
+
+@font-face {
+    font-family: noddle;
+    src: url(fonts/big_noodle_titling.ttf);
+}
+
+@font-face {
+    font-family: azonix;
+    src: url(fonts/Azonix.otf);
+}

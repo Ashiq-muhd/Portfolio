@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Ashiq</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+    <div class="hero">
+        <nav>
+            <h2>Ashiq<span>.dev</span></h2>
+            <ul>
+                <li><a href="/#home" class="active">HOME</a></li>
+                <li><a href="/#about">ABOUT</a></li>
+                <li><a href="/#projects">PROJECTS</a></li>
+                <li><a href="/#contact">CONTACT</a></li>
+            </ul>
+            <div class="menu-bar">
+                <i class='bx bx-menu'></i>
+            </div>
+        </nav>
+    </div></header>
+<!-- MAIN PART -->
+
+<section class="project-section" id="project-section">
+    <div class="second-page-content">
+        <div class="title-content" id="title-content">
+        <h2>Fitme Application</h2>
+        <!-- <span>A project that I made for my college in 2021.</span> -->
+        </div>
+        <div class="project-image-content">
+            <img src="images/fitme details.jpg" alt="">
+        </div>
+    </div>
+</section>
+
+    <section class="footer">
+        <div class="end-footer">
+        <p>Copyright © 2023 Muhammed Ashiq | All Rights Reserved.</p>
+        </div>
+        
+        <div class="top">
+            <a href="#title-content"><i class='bx bx-up-arrow-alt'></i></a>
+        </div>
+    </section>
+
+<script src="https://unpkg.com/typed.js@2.1.0/dist/typed.umd.js"></script>
+<script>
+    var typed = new Typed('.home-content h3 span', {
+        strings: ["Front-End Developer", "UI/UX Designer","Applcation Developer","Product Photographer"],
+        loop:true,
+        typeSpeed:100,
+        backSpeed:50, 
+        backDelay:1500
+    })
+</script>
+<script type="text/javascript">
+    window.addEventListener("scroll",function(){
+        var header=document.querySelector("header");
+        header.classList.toggle("sticky",window.scrollY>0);
+    });
+</script>
+</body>
+</html>
